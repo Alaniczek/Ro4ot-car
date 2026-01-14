@@ -1,0 +1,9 @@
+DOCS 4 Ro4Ot:
+Structure
+-src
+--assets : img, vectors etc.
+--Jsons
+--Scripts
+--Styles
+-Tests
+docs
