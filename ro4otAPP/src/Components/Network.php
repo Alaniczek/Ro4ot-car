@@ -59,7 +59,7 @@ class Network {
             }
         }
     }
-    public function FindESP() : void //In progress
+    public function FindESP() : void 
     {
         if (empty($this->devices)) {
             return; 
@@ -105,7 +105,6 @@ $ESP_FOUND = $net->getSearchedDevices();
 
 
 echo "Wykryte urządzenia w sieci:\n";
-//print_r($listaUrządzeń);
 echo "\n";
 print_r($ESP_FOUND);
 
