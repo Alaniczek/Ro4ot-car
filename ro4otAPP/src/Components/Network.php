@@ -59,16 +59,36 @@ class Network {
             }
         }
     }
-    public function FindESP() :void //In progress
+    public function FindESP() : void //In progress
     {
-        if($devices == null) exit;
-        foreach ($devices as $device)
+        if (empty($this->devices)) {
+            return; 
+        }
+        $ESP_MACs_FACTORY = [ // THAT's OFFCIAL MAC ADRESS FOR ESP32,8266,CAM
+            '24:6F:28', '30:AE:A4', '8C:AA:B5', 'AC:67:B2', 
+            'BC:DD:C2', '40:22:D8', '48:3F:DA', 'D8:A0:1D',
+            'EC:FA:BC', '54:5A:16', '60:01:94', 'A4:CF:12'
+        ];
+        $this->searchedDevices = [];
+
+        foreach ($this->devices as $device)
         {
-            echo $device['mac'];
+            echo $device['mac'] . "\n";
+            foreach ($ESP_MACs_FACTORY as $ESP_MAC_FACTORY) 
+            {
+                if (str_starts_with($device['mac'], $ESP_MAC_FACTORY)) 
+                {
+                    $this->searchedDevices[] = $device;
+                    break; 
+                }
+            }
         }
     }
 
-    
+    public function getSearchedDevices(): array
+    {
+        return $this->searchedDevices;
+    }
 
     public function getDevices(): array
     {
@@ -77,13 +97,16 @@ class Network {
 }
 
 
-
+/*TESTS */
 $net = new Network();
 $listaUrządzeń = $net->getDevices();
+$ESP_FINDER = $net->FindESP();
+$ESP_FOUND = $net->getSearchedDevices();
+
 
 echo "Wykryte urządzenia w sieci:\n";
-print_r($listaUrządzeń);
+//print_r($listaUrządzeń);
 echo "\n";
-print_r($net->FindESP());
+print_r($ESP_FOUND);
 
 ?>
