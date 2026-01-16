@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skaner Sieci LAN</title>
+    <style>
+        :root { --primary: #007bff; --bg: #f8f9fa; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); padding: 40px; color: #333; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h2 { margin-top: 0; color: #2c3e50; }
+        
+        .controls { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
+        .btn { padding: 12px 24px; background: var(--primary); color: white; border: none; cursor: pointer; border-radius: 6px; font-weight: bold; transition: opacity 0.2s; }
+        .btn:hover { opacity: 0.9; }
+        .btn:disabled { background: #adb5bd; cursor: not-allowed; }
+        
+        #loader { display: none; font-size: 0.9em; color: var(--primary); font-weight: bold; }
+        
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border-bottom: 1px solid #eee; padding: 15px; text-align: left; }
+        th { background-color: #fcfcfc; color: #666; text-transform: uppercase; font-size: 0.85em; }
+        code { background: #f1f1f1; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        
+        .empty-state { text-align: center; color: #999; padding: 40px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Skaner urządzeń w sieci</h2>
+    <p>Pobieranie adresów IP i MAC z tablicy ARP serwera.</p>
+
+    <div class="controls">
+        <button id="scanBtn" class="btn">Rozpocznij skanowanie</button>
+        <span id="loader">Łączenie z serwerem...</span>
+    </div>
+
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>Adres IP</th>
+                <th>Adres MAC</th>
+            </tr>
+        </thead>
+        <tbody id="resultsBody">
+            <tr>
+                <td colspan="2" class="empty-state">Kliknij przycisk, aby przeszukać sieć.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    document.getElementById('scanBtn').addEventListener('click', async function() {
+        const btn = this;
+        const loader = document.getElementById('loader');
+        const tbody = document.getElementById('resultsBody');
+
+        // Reset UI
+        btn.disabled = true;
+        loader.style.display = 'inline';
+        tbody.innerHTML = '<tr><td colspan="2" class="empty-state">Trwa pobieranie danych...</td></tr>';
+
+        try {
+            // Zakładamy, że scan.php jest w tym samym folderze
+            const response = await fetch('scan.php');
+            
+            if (!response.ok) {
+                throw new Error(`Błąd serwera: ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            if (!data || data.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="2" class="empty-state">Brak aktywnych urządzeń w pamięci cache ARP serwera.</td></tr>';
+            } else {
+                // Generowanie wierszy w pamięci (bezpieczniejsze i szybsze)
+                const rows = data.map(device => `
+                    <tr>
+                        <td><strong>${device.ip}</strong></td>
+                        <td><code>${device.mac}</code></td>
+                    </tr>
+                `).join('');
+                tbody.innerHTML = rows;
+            }
+        } catch (error) {
+            console.error('Błąd:', error);
+            tbody.innerHTML = `<tr><td colspan="2" class="empty-state" style="color: red;">Wystąpił błąd: ${error.message}</td></tr>`;
+        } finally {
+            btn.disabled = false;
+            loader.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
