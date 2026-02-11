@@ -1,4 +1,4 @@
-<?php
+<?php 
 // stream.php - wklej IP z Serial Monitor
 $esp32_url = "http://192.168.125.61/stream";
 
