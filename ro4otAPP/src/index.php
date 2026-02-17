@@ -1,54 +1,74 @@
 <?php
-include 'Components/PHP/JsonRunnerAPI.php';
+// --- KONFIGURACJA ---
+$esp_ip = '192.168.125.34'; // IP Twojego ESP
+$esp_port = 4210;
+$plik_logow = 'logi.txt';
+
+// --- 1. OBSŁUGA LOGÓW OD ESP (Tło) ---
+if (isset($_GET['msg'])) {
+    $wpis = date("H:i:s") . " [ESP -> PHP]: " . $_GET['msg'] . "\n";
+    file_put_contents($plik_logow, $wpis, FILE_APPEND);
+    exit;
+}
+
+// --- 2. OBSŁUGA PRZYCISKÓW ---
+if (isset($_POST['akcja'])) {
+    $cmd = $_POST['akcja'];
+
+    // Jeśli to komenda czyszczenia
+    if ($cmd === 'clear') {
+        file_put_contents($plik_logow, ""); // Czyści plik do zera
+    } 
+    // Jeśli to inna komenda (sterowanie)
+    else {
+        // Zapisz w logu co kliknięto
+        $wpis = date("H:i:s") . " [PHP -> ESP]: Wyslano komende " . $cmd . "\n";
+        file_put_contents($plik_logow, $wpis, FILE_APPEND);
+
+        // Wyślij UDP do robota
+        $sock = fsockopen("udp://$esp_ip", $esp_port);
+        if ($sock) {
+            fwrite($sock, $cmd);
+            fclose($sock);
+        }
+    }
+
+    // Odśwież stronę (czyści formularz przed F5)
+    header("Location: " . $_SERVER['PHP_SELF']); 
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Pobierz IP</title>
+    <title>Sterowanie Robotem</title>
 </head>
 <body>
 
-    <button id="btnGetIP">Pokaż moje IP</button>
-    <p>Twoje IP to: <span id="displayIP">...</span></p>
-    <span>Wpisz IP ESP</span>
-    
-    
-    <!-- <input type="text" name="ESPIP" id="ESPIP">
-    <p><span id="displayESPIP"></span></p> -->
+    <h1>Panel Sterowania</h1>
 
-    <!-- <div id="moj-stream">
-        <img src="stream.php" style="width: 100%; height: auto;">
-    </div> -->
+    <form method="post">
+        <button type="submit" name="akcja" value="1" style="font-size: 20px; padding: 10px; background: #90EE90;">WLACZ LED</button>
+        <button type="submit" name="akcja" value="0" style="font-size: 20px; padding: 10px; background: #FFB6C1;">WYLACZ LED</button>
+        
+        <button type="submit" name="akcja" value="clear" style="font-size: 20px; padding: 10px; background: #D3D3D3; float: right;">LOG CLEAR</button>
+    </form>
 
-
-    <input id="ip" value="<?= $d['ip'] ?? '' ?>" oninput="s()" placeholder="IP">
-    <input id="rozkaz" value="<?= $d['rozkaz'] ?? '' ?>" oninput="s()" placeholder="Rozkaz">
-
-    
-
-
-
+    <hr>
+    <h3>LOGI SYSTEMOWE</h3>
+    <textarea style="width: 100%; height: 300px; font-family: monospace;">
+<?php 
+    if (file_exists($plik_logow)) {
+        echo file_get_contents($plik_logow);
+    }
+?>
+    </textarea>
 
     <script>
-    function s() {
-        fetch('', {
-            method: 'POST',
-            body: JSON.stringify({
-                ip: document.getElementById('ip').value,
-                rozkaz: document.getElementById('rozkaz').value
-            })
-        });
-    }
+        setTimeout(function(){ location.reload(); }, 5000);
     </script>
 
-    <script src="Components/JS/GetUserIP.js"></script>
-    <script> // ESP IP . _. 
-        const input = document.getElementById('ESPIP');
-        const output = document.getElementById('displayESPIP');
-        
-        input.oninput = () => output.innerText = input.value || '—';
-    </script>
 </body>
 </html>
