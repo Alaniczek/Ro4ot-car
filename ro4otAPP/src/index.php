@@ -1,29 +1,34 @@
 <?php
 // --- KONFIGURACJA ---
-$esp_ip = '192.168.125.34'; // IP Twojego ESP
+require_once 'Components/PHP/Logger.php';
+
+$esp_ip = '192.168.125.34'; // ESP IP :> 
 $esp_port = 4210;
 $plik_logow = 'logi.txt';
 
-// --- 1. OBSŁUGA LOGÓW OD ESP (Tło) ---
+$Logger = new Logger();
+$Logger->changePath('Jsons/LogHistory.json');
+
+// OD ESP
 if (isset($_GET['msg'])) {
     $wpis = date("H:i:s") . " [ESP -> PHP]: " . $_GET['msg'] . "\n";
     file_put_contents($plik_logow, $wpis, FILE_APPEND);
+    $Logger->log("ESP wysłał wiadomość: " . $_GET['msg']);
     exit;
 }
 
-// --- 2. OBSŁUGA PRZYCISKÓW ---
+// DO ESP
 if (isset($_POST['akcja'])) {
     $cmd = $_POST['akcja'];
 
-    // Jeśli to komenda czyszczenia
     if ($cmd === 'clear') {
-        file_put_contents($plik_logow, ""); // Czyści plik do zera
+        file_put_contents($plik_logow, "");
+        $Logger->clearLog();
     } 
-    // Jeśli to inna komenda (sterowanie)
     else {
-        // Zapisz w logu co kliknięto
         $wpis = date("H:i:s") . " [PHP -> ESP]: Wyslano komende " . $cmd . "\n";
         file_put_contents($plik_logow, $wpis, FILE_APPEND);
+        $Logger->log("Wysłano komendę do ESP: " . $cmd);
 
         // Wyślij UDP do robota
         $sock = fsockopen("udp://$esp_ip", $esp_port);
@@ -52,7 +57,7 @@ if (isset($_POST['akcja'])) {
     <form method="post">
         <button type="submit" name="akcja" value="1" style="font-size: 20px; padding: 10px; background: #90EE90;">WLACZ LED</button>
         <button type="submit" name="akcja" value="0" style="font-size: 20px; padding: 10px; background: #FFB6C1;">WYLACZ LED</button>
-        
+
         <button type="submit" name="akcja" value="clear" style="font-size: 20px; padding: 10px; background: #D3D3D3; float: right;">LOG CLEAR</button>
     </form>
 

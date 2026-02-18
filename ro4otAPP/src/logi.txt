@@ -1,6 +1,0 @@
-20:59:23 [PHP -> ESP]: Wyslano komende 1
-20:59:23 [PHP -> ESP]: Wyslano komende 1
-20:59:24 [PHP -> ESP]: Wyslano komende 0
-21:02:39 [PHP -> ESP]: Wyslano komende 0
-21:02:40 [PHP -> ESP]: Wyslano komende 1
-21:02:40 [PHP -> ESP]: Wyslano komende 0
