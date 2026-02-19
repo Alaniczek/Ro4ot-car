@@ -57,9 +57,7 @@ if (isset($_POST['action'])) {
 
     <form method="post">
         <div class="CommandButtons"></div>
-        <button type="submit" name="action" value="1" style="font-size: 20px; padding: 10px; background: #90EE90;">WLACZ LED</button>
-        <button type="submit" name="action" value="0" style="font-size: 20px; padding: 10px; background: #FFB6C1;">WYLACZ LED</button>
-
+       
         <button type="submit" name="action" value="clear" style="font-size: 20px; padding: 10px; background: #D3D3D3; float: right;">LOG CLEAR</button>
     </form>
     
