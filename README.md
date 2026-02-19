@@ -1,14 +1,10 @@
 # Ro4ot-car
-## GOAL: 
-Create WORKING website that can controll car using HTTP protocol.
-## REQUIRED:
-- [x] PHP
-- [x] ESP
-- [ ] Money for electronics parts 
-## TASKS:
-- [ ] Simple design
-- [ ] ESP to Website communitate
-- [ ] Website to controll car (Using htpp) 
-- [ ] Simple car, using ESP32
-- [ ] JSON read (Car type etc.)
-- [ ] Customise website (moving buttons)
+Ro4ot is a simple app that lets you control the robot (on the same network) over the internet.
+Soon:
+- I'll be adding 100% English subtitles (right now, half are in Polish <3)
+- instruction how to download.
+  
+Presentation video:
+
+https://github.com/user-attachments/assets/8df46338-74d9-43f0-afd7-b58a962bb919
+
