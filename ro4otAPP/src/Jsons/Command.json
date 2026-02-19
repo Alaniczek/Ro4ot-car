@@ -1,0 +1,19 @@
+{
+    "move_forward": {
+        "category": "Move",
+        "order": "F"
+    },
+    "move_back": {
+        "category": "Move",
+        "order": "B"
+    },
+    "STOP": {
+        "category": "Move",
+        "order": "S"
+    },
+    "test_command": {
+        "category": "test_categoryy",
+        "order": "t"
+    }
+    
+}

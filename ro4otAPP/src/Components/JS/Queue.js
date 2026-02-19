@@ -8,6 +8,11 @@ class Queue {
         this.items.push(item);
     }
     
+    GetEveryItem()
+    {
+        return this.items;
+    }
+    
     ThrowItem() {
         if (this.items.length > 0) {
             return this.items.shift(); //USUWA I ZWRACA - FIFO

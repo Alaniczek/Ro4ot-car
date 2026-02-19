@@ -41,6 +41,16 @@ void loop() {
       digitalWrite(LED_BUILTIN, HIGH);
       wyslijDoPHP("LED_WYLACZONY");
     }
+    else {
+      // Zamiast spacji użyj podkreślnika, to bezpieczniejsze w URL - OD CHATA :> 
+      String logMsg = "CMD_ERR_" + String(cmd); 
+      wyslijDoPHP(logMsg);
+    }
+
+    // }else
+    // {
+    //   wyslijDoPHP("NIEZNANA_KOMENDA_" + cmd);
+    // }
   }
 
   // 2. PING CO 10 SEKUND (Żeby nie śmiecić za mocno)
@@ -59,6 +69,7 @@ void wyslijDoPHP(String wiadomosc) {
     client.print("GET /Ro4ot-car/ro4otAPP/src/index.php?msg=" + wiadomosc + " HTTP/1.1\r\n" +
                  "Host: " + SERVER_IP + "\r\n" + 
                  "Connection: close\r\n\r\n");
+    delay(30);
     client.stop();
   } else {
     Serial.println("[BLAD] Nie polaczono z PHP!");
