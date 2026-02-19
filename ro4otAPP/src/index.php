@@ -82,7 +82,8 @@ if (isset($_POST['action'])) {
 
     
     <script>
-const myButton = new ButtonMakerFromJSON('Jsons/Command.json?v=' + Date.now());        myButton.render('.CommandButtons');
+        const myButton = new ButtonMakerFromJSON('Jsons/Command.json?v=' + Date.now());        
+        myButton.render('.CommandButtons');
     </script>
     <script>
         setTimeout(function(){ location.reload(); }, 5000);
