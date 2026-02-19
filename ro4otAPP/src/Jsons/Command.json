@@ -1,19 +1,34 @@
 {
     "move_forward": {
         "category": "Move",
-        "order": "F"
+        "order": "W"
     },
     "move_back": {
         "category": "Move",
-        "order": "B"
+        "order": "S"
+    },
+    "move_left": {
+        "category": "Move",
+        "order": "A"
+    },
+    "move_right": {
+        "category": "Move",
+        "order": "D"
     },
     "STOP": {
         "category": "Move",
-        "order": "S"
+        "order": "X"
     },
-    "test_command": {
-        "category": "test_categoryy",
-        "order": "t"
+    "Set_Power_100": {
+        "category": "Power",
+        "order": "9"
+    },
+    "Set_Power_50": {
+        "category": "Power",
+        "order": "8"
+    },
+    "Set_Power_25": {
+        "category": "Power",
+        "order": "7"
     }
-    
 }

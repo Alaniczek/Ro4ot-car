@@ -1,2 +1,2 @@
-Runner -> You send it to ESP
-Reciver -> You got it from ESP
+logbook from junior programmer:
+DO NOT EVEN ADD MORE THAN ONE LETTER IN ORDER, CAUSE IT WILL DESTROY EVERYTHING

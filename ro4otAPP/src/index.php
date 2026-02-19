@@ -19,7 +19,8 @@ if (isset($_GET['msg'])) {
     exit;
 }
 
-// DO ESP
+$CommandManager = new CommandManager($esp_ip, $esp_port, $Logger);
+
 if (isset($_POST['action'])) {
     $cmd = $_POST['action'];
 
@@ -31,19 +32,15 @@ if (isset($_POST['action'])) {
         $wpis = date("H:i:s") . " [PHP -> ESP]: Wyslano komende " . $cmd . "\n";
         file_put_contents($plik_logow, $wpis, FILE_APPEND);
         $Logger->log("Wysłano komendę do ESP: " . $cmd);
-
-        // Wyślij UDP do robota
-        $sock = fsockopen("udp://$esp_ip", $esp_port);
-        if ($sock) {
-            fwrite($sock, $cmd);
-            fclose($sock);
-        }
+        
+        $CommandManager->sendCommand($cmd);
     }
 
     // Odśwież stronę (czyści formularz przed F5)
     header("Location: " . $_SERVER['PHP_SELF']); 
     exit;
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -67,9 +64,7 @@ if (isset($_POST['action'])) {
     </form>
     
     <hr>
-    <div id="buttonContainer">
-        
-    </div>
+   
     <hr>
     <h3>LOGI SYSTEMOWE</h3>
     <textarea style="width: 100%; height: 300px; font-family: monospace;">
