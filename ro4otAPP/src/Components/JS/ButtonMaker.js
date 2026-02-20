@@ -1,37 +1,42 @@
 class ButtonMakerFromJSON {
-    constructor(JSON_Location) {
-        this.JSON_Location = JSON_Location;
+    constructor(jsonLocation) {
+        this.jsonLocation = jsonLocation;
     }
 
-    //TEMPLATE
-    async render(selector) {
-        const response = await fetch(this.JSON_Location);
-        const data = await response.json();
-        const container = document.querySelector(selector);
+    async render(selector, buttonName = "action") {
+        try {
+            const response = await fetch(`${this.jsonLocation}?v=${Date.now()}`);
+            const data = await response.json();
+            const container = document.querySelector(selector);
 
-        if (!container) return;
+            if (!container) return;
 
-        // Line from Gemini :> 
-        // Object.entries pozwala nam wyciągnąć i nazwę (klucz) i dane (order/category)
-        Object.entries(data).forEach(([klucz, dane]) => {
-            const btn = this.createButton(klucz, dane.order);
-            container.appendChild(btn);
-        });
+            const fragment = document.createDocumentFragment();
+
+            Object.entries(data).forEach(([key, value]) => {
+                const btn = this.createButton(key, value.order, buttonName);
+                fragment.appendChild(btn);
+            });
+
+            container.appendChild(fragment);
+        } catch (err) {
+            console.error("Błąd ładowania przycisków:", err);
+        }
     }
 
-    createButton(KeyName, Order) {
+    createButton(keyName, order, buttonName) {
         const btn = document.createElement('button');
-        
         btn.type = "submit";
-        btn.name = "action";
-        btn.value = Order; 
-        
-        btn.innerText = KeyName; 
+        btn.name = buttonName;
+        btn.value = order;
+        btn.innerText = keyName;
 
-// STYLE
-        btn.style.fontSize = "20px";
-        btn.style.padding = "10px";
-        btn.style.margin = "5px"; 
+        // Skrócony zapis styli
+        Object.assign(btn.style, {
+            fontSize: "20px",
+            padding: "10px",
+            margin: "5px"
+        });
 
         return btn;
     }

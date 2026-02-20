@@ -1,52 +1,34 @@
-23:28:03 [ESP -> PHP]: PING
-23:28:05 [PHP -> ESP]: Wyslano komende W
-23:28:05 [ESP -> PHP]: MOVE_FORWARD
-23:28:06 [PHP -> ESP]: Wyslano komende S
-23:28:06 [ESP -> PHP]: MOVE_BACK
-23:28:07 [PHP -> ESP]: Wyslano komende A
-23:28:07 [ESP -> PHP]: MOVE_LEFT
-23:28:07 [PHP -> ESP]: Wyslano komende D
-23:28:07 [ESP -> PHP]: MOVE_RIGHT
-23:28:13 [ESP -> PHP]: PING
-23:28:27 [ESP -> PHP]: Start_Systemu
-23:28:27 [ESP -> PHP]: PING
-23:28:29 [PHP -> ESP]: Wyslano komende W
-23:28:29 [ESP -> PHP]: MOVE_FORWARD
-23:28:37 [ESP -> PHP]: PING
-23:28:43 [PHP -> ESP]: Wyslano komende X
-23:28:44 [ESP -> PHP]: STOP
-23:28:48 [ESP -> PHP]: PING
-23:28:58 [ESP -> PHP]: PING
-23:28:58 [PHP -> ESP]: Wyslano komende W
-23:28:58 [ESP -> PHP]: MOVE_FORWARD
-23:29:00 [PHP -> ESP]: Wyslano komende S
-23:29:01 [ESP -> PHP]: MOVE_BACK
-23:29:02 [PHP -> ESP]: Wyslano komende A
-23:29:02 [ESP -> PHP]: MOVE_LEFT
-23:29:03 [PHP -> ESP]: Wyslano komende D
-23:29:03 [ESP -> PHP]: MOVE_RIGHT
-23:29:05 [PHP -> ESP]: Wyslano komende X
-23:29:05 [ESP -> PHP]: STOP
-23:29:07 [PHP -> ESP]: Wyslano komende 9
-23:29:08 [ESP -> PHP]: PING
-23:29:08 [ESP -> PHP]: POWER_200
-23:29:09 [PHP -> ESP]: Wyslano komende W
-23:29:09 [ESP -> PHP]: MOVE_FORWARD
-23:29:11 [PHP -> ESP]: Wyslano komende 8
-23:29:11 [ESP -> PHP]: POWER_125
-23:29:11 [PHP -> ESP]: Wyslano komende W
-23:29:11 [ESP -> PHP]: MOVE_FORWARD
-23:29:12 [PHP -> ESP]: Wyslano komende 7
-23:29:12 [ESP -> PHP]: POWER_50
-23:29:12 [PHP -> ESP]: Wyslano komende W
-23:29:12 [ESP -> PHP]: MOVE_FORWARD
-23:29:17 [PHP -> ESP]: Wyslano komende 8
-23:29:17 [ESP -> PHP]: POWER_125
-23:29:17 [PHP -> ESP]: Wyslano komende W
-23:29:18 [ESP -> PHP]: MOVE_FORWARD
-23:29:18 [ESP -> PHP]: PING
-23:29:20 [PHP -> ESP]: Wyslano komende X
-23:29:20 [ESP -> PHP]: STOP
-23:29:28 [ESP -> PHP]: PING
-23:29:38 [ESP -> PHP]: PING
-23:29:48 [ESP -> PHP]: PING
+15:18:37 [ESP -> PHP]: PING
+15:18:47 [PHP -> ESP]: Wyslano komende X
+15:18:47 [ESP -> PHP]: STOP
+15:18:47 [ESP -> PHP]: PING
+15:18:51 [PHP -> ESP]: Wyslano komende W
+15:18:51 [ESP -> PHP]: MOVE_FORWARD
+15:18:53 [PHP -> ESP]: Wyslano komende W
+15:18:53 [ESP -> PHP]: MOVE_FORWARD
+15:18:54 [PHP -> ESP]: Wyslano komende S
+15:18:54 [ESP -> PHP]: MOVE_BACK
+15:18:55 [PHP -> ESP]: Wyslano komende A
+15:18:55 [ESP -> PHP]: MOVE_LEFT
+15:18:56 [PHP -> ESP]: Wyslano komende D
+15:18:56 [ESP -> PHP]: MOVE_RIGHT
+15:18:57 [ESP -> PHP]: PING
+15:18:58 [PHP -> ESP]: Wyslano komende X
+15:18:58 [ESP -> PHP]: STOP
+15:19:00 [PHP -> ESP]: Wyslano komende 9
+15:19:00 [ESP -> PHP]: POWER_200
+15:19:01 [PHP -> ESP]: Wyslano komende W
+15:19:01 [ESP -> PHP]: MOVE_FORWARD
+15:19:04 [PHP -> ESP]: Wyslano komende 8
+15:19:04 [ESP -> PHP]: POWER_125
+15:19:04 [PHP -> ESP]: Wyslano komende W
+15:19:04 [ESP -> PHP]: MOVE_FORWARD
+15:19:06 [PHP -> ESP]: Wyslano komende 7
+15:19:07 [ESP -> PHP]: POWER_50
+15:19:07 [ESP -> PHP]: PING
+15:19:08 [PHP -> ESP]: Wyslano komende W
+15:19:08 [ESP -> PHP]: MOVE_FORWARD
+15:19:10 [PHP -> ESP]: Wyslano komende X
+15:19:10 [ESP -> PHP]: STOP
+15:19:17 [ESP -> PHP]: PING
+15:19:27 [ESP -> PHP]: PING

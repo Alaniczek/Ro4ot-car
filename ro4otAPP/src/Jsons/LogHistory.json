@@ -1,290 +1,194 @@
 [
     {
-        "data": "2026-02-19 23:28:03",
+        "data": "2026-02-20 15:18:37",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: PING"
     },
     {
-        "data": "2026-02-19 23:28:05",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
-    },
-    {
-        "data": "2026-02-19 23:28:05",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
-    },
-    {
-        "data": "2026-02-19 23:28:05",
-        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: MOVE_FORWARD"
-    },
-    {
-        "data": "2026-02-19 23:28:06",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: S"
-    },
-    {
-        "data": "2026-02-19 23:28:06",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: S"
-    },
-    {
-        "data": "2026-02-19 23:28:06",
-        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: MOVE_BACK"
-    },
-    {
-        "data": "2026-02-19 23:28:07",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: A"
-    },
-    {
-        "data": "2026-02-19 23:28:07",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: A"
-    },
-    {
-        "data": "2026-02-19 23:28:07",
-        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: MOVE_LEFT"
-    },
-    {
-        "data": "2026-02-19 23:28:07",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: D"
-    },
-    {
-        "data": "2026-02-19 23:28:07",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: D"
-    },
-    {
-        "data": "2026-02-19 23:28:07",
-        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: MOVE_RIGHT"
-    },
-    {
-        "data": "2026-02-19 23:28:13",
-        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: PING"
-    },
-    {
-        "data": "2026-02-19 23:28:27",
-        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: Start_Systemu"
-    },
-    {
-        "data": "2026-02-19 23:28:27",
-        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: PING"
-    },
-    {
-        "data": "2026-02-19 23:28:29",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
-    },
-    {
-        "data": "2026-02-19 23:28:29",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
-    },
-    {
-        "data": "2026-02-19 23:28:29",
-        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: MOVE_FORWARD"
-    },
-    {
-        "data": "2026-02-19 23:28:37",
-        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: PING"
-    },
-    {
-        "data": "2026-02-19 23:28:43",
+        "data": "2026-02-20 15:18:47",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: X"
     },
     {
-        "data": "2026-02-19 23:28:43",
+        "data": "2026-02-20 15:18:47",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: X"
     },
     {
-        "data": "2026-02-19 23:28:44",
+        "data": "2026-02-20 15:18:47",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: STOP"
     },
     {
-        "data": "2026-02-19 23:28:48",
+        "data": "2026-02-20 15:18:47",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: PING"
     },
     {
-        "data": "2026-02-19 23:28:58",
-        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: PING"
-    },
-    {
-        "data": "2026-02-19 23:28:58",
+        "data": "2026-02-20 15:18:51",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
     },
     {
-        "data": "2026-02-19 23:28:58",
+        "data": "2026-02-20 15:18:51",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
     },
     {
-        "data": "2026-02-19 23:28:58",
+        "data": "2026-02-20 15:18:51",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: MOVE_FORWARD"
     },
     {
-        "data": "2026-02-19 23:29:00",
+        "data": "2026-02-20 15:18:53",
+        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
+    },
+    {
+        "data": "2026-02-20 15:18:53",
+        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
+    },
+    {
+        "data": "2026-02-20 15:18:53",
+        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: MOVE_FORWARD"
+    },
+    {
+        "data": "2026-02-20 15:18:54",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: S"
     },
     {
-        "data": "2026-02-19 23:29:00",
+        "data": "2026-02-20 15:18:54",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: S"
     },
     {
-        "data": "2026-02-19 23:29:01",
+        "data": "2026-02-20 15:18:54",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: MOVE_BACK"
     },
     {
-        "data": "2026-02-19 23:29:02",
+        "data": "2026-02-20 15:18:55",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: A"
     },
     {
-        "data": "2026-02-19 23:29:02",
+        "data": "2026-02-20 15:18:55",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: A"
     },
     {
-        "data": "2026-02-19 23:29:02",
+        "data": "2026-02-20 15:18:55",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: MOVE_LEFT"
     },
     {
-        "data": "2026-02-19 23:29:03",
+        "data": "2026-02-20 15:18:56",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: D"
     },
     {
-        "data": "2026-02-19 23:29:03",
+        "data": "2026-02-20 15:18:56",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: D"
     },
     {
-        "data": "2026-02-19 23:29:03",
+        "data": "2026-02-20 15:18:56",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: MOVE_RIGHT"
     },
     {
-        "data": "2026-02-19 23:29:05",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: X"
-    },
-    {
-        "data": "2026-02-19 23:29:05",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: X"
-    },
-    {
-        "data": "2026-02-19 23:29:05",
-        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: STOP"
-    },
-    {
-        "data": "2026-02-19 23:29:07",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: 9"
-    },
-    {
-        "data": "2026-02-19 23:29:07",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: 9"
-    },
-    {
-        "data": "2026-02-19 23:29:08",
+        "data": "2026-02-20 15:18:57",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: PING"
     },
     {
-        "data": "2026-02-19 23:29:08",
+        "data": "2026-02-20 15:18:58",
+        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: X"
+    },
+    {
+        "data": "2026-02-20 15:18:58",
+        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: X"
+    },
+    {
+        "data": "2026-02-20 15:18:58",
+        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: STOP"
+    },
+    {
+        "data": "2026-02-20 15:19:00",
+        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: 9"
+    },
+    {
+        "data": "2026-02-20 15:19:00",
+        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: 9"
+    },
+    {
+        "data": "2026-02-20 15:19:00",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: POWER_200"
     },
     {
-        "data": "2026-02-19 23:29:09",
+        "data": "2026-02-20 15:19:01",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
     },
     {
-        "data": "2026-02-19 23:29:09",
+        "data": "2026-02-20 15:19:01",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
     },
     {
-        "data": "2026-02-19 23:29:09",
+        "data": "2026-02-20 15:19:01",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: MOVE_FORWARD"
     },
     {
-        "data": "2026-02-19 23:29:11",
+        "data": "2026-02-20 15:19:04",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: 8"
     },
     {
-        "data": "2026-02-19 23:29:11",
+        "data": "2026-02-20 15:19:04",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: 8"
     },
     {
-        "data": "2026-02-19 23:29:11",
+        "data": "2026-02-20 15:19:04",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: POWER_125"
     },
     {
-        "data": "2026-02-19 23:29:11",
+        "data": "2026-02-20 15:19:04",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
     },
     {
-        "data": "2026-02-19 23:29:11",
+        "data": "2026-02-20 15:19:04",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
     },
     {
-        "data": "2026-02-19 23:29:11",
+        "data": "2026-02-20 15:19:04",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: MOVE_FORWARD"
     },
     {
-        "data": "2026-02-19 23:29:12",
+        "data": "2026-02-20 15:19:06",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: 7"
     },
     {
-        "data": "2026-02-19 23:29:12",
+        "data": "2026-02-20 15:19:06",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: 7"
     },
     {
-        "data": "2026-02-19 23:29:12",
+        "data": "2026-02-20 15:19:07",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: POWER_50"
     },
     {
-        "data": "2026-02-19 23:29:12",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
-    },
-    {
-        "data": "2026-02-19 23:29:12",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
-    },
-    {
-        "data": "2026-02-19 23:29:12",
-        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: MOVE_FORWARD"
-    },
-    {
-        "data": "2026-02-19 23:29:17",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: 8"
-    },
-    {
-        "data": "2026-02-19 23:29:17",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: 8"
-    },
-    {
-        "data": "2026-02-19 23:29:17",
-        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: POWER_125"
-    },
-    {
-        "data": "2026-02-19 23:29:17",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
-    },
-    {
-        "data": "2026-02-19 23:29:17",
-        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
-    },
-    {
-        "data": "2026-02-19 23:29:18",
-        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: MOVE_FORWARD"
-    },
-    {
-        "data": "2026-02-19 23:29:18",
+        "data": "2026-02-20 15:19:07",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: PING"
     },
     {
-        "data": "2026-02-19 23:29:20",
+        "data": "2026-02-20 15:19:08",
+        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
+    },
+    {
+        "data": "2026-02-20 15:19:08",
+        "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: W"
+    },
+    {
+        "data": "2026-02-20 15:19:08",
+        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: MOVE_FORWARD"
+    },
+    {
+        "data": "2026-02-20 15:19:10",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: X"
     },
     {
-        "data": "2026-02-19 23:29:20",
+        "data": "2026-02-20 15:19:10",
         "zdarzenie": "Wys\u0142ano komend\u0119 do ESP: X"
     },
     {
-        "data": "2026-02-19 23:29:20",
+        "data": "2026-02-20 15:19:10",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: STOP"
     },
     {
-        "data": "2026-02-19 23:29:28",
+        "data": "2026-02-20 15:19:17",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: PING"
     },
     {
-        "data": "2026-02-19 23:29:38",
-        "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: PING"
-    },
-    {
-        "data": "2026-02-19 23:29:48",
+        "data": "2026-02-20 15:19:27",
         "zdarzenie": "ESP wys\u0142a\u0142 wiadomo\u015b\u0107: PING"
     }
 ]
